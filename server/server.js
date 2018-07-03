@@ -14,7 +14,4 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: false}));
 
 mongoose.connect('mongodb://admin:password1@ds125871.mlab.com:25871/happyhourhappytimes');
 app.use('/', router);
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
 module.exports=app;
